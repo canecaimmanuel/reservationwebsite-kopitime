@@ -127,30 +127,20 @@ a {
 
 .button:hover {
     background: #a98779;
-    color: #fff;
     border: #fff;
 }
 
-
-/* footer body 
-
-#footer-body {
-    background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp);
-    height: 400px;
-    width: 100%;
-}
-
-.footer-content {
+.contact-content {
     padding-top: 25px;
 }
 
-.footer-btn {
+.contact-btn {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
-.footer-button {
+.contact-button {
     border: 1px solid #fff;
     margin-left: 10px;
     padding: 10px 40px;
@@ -160,16 +150,12 @@ a {
     background: transparent;
 }
 
-.footer-button:hover {
+.contact-button:hover {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,195,164,1) 31%, rgba(75,31,14,0.8801645658263305) 100%);
     color: black;
     font-weight: 650;
     box-shadow: 0px -2px 5px 3px #a98779;
 }
-
-.copyright-text {
-    padding: 15px 0;
-} */
 
 @media screen and (max-width: 402px) {
     .header-text p {

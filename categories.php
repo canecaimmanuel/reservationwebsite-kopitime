@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-lg-3 main-card">
+            <div class="col-md-4 col-sm-6 col-lg-3 main-card" style="margin-bottom: 7rem;">
                 <div class="card menu-card">
                     <img class="img-fluid" src="coffeepics/belgiumChocolateNitroColdBrew.png" alt="">
                     <div class=" menu-text">
