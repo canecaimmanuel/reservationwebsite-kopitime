@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Meddon&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid violet; */
+}
+
+.title {
+    color: #a98779;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    margin-left: 40px;
+}
+
+.navbar-brand span {
+    color: #a98779;
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main section  */
+.main-content {
+    background-color: #f1f2f6;
+    padding: 3% 0;
+}
+
+.categories{
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    width: 23%;
+}
+
+
+/* add admin page  */
+.tbl_admin {
+    width: 40%;
+}
+
+/* manage_admin page */
+
+table tr th {
+    border-bottom: 1px solid rgb(91, 87, 87);
+    padding: 1%;
+}
+
+table tr td {
+    padding: 1%;
+}
+
+/* login section start */
+#cover {
+    background: url("../images/kopibar.jpg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100vh;
+}
+
+#login {
+    margin-top: 10rem;
+    padding: 3rem;
+    background: linear-gradient(rgba(0,0,0,0.5),#4b1f0ed0);
+    border-radius: 20px;
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+}
+
+.login-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.login-title:hover {
+    color: #c99c8a;
+}
+
+
+.btn_login {
+    border: 1px solid #fff;
+    margin-left: 10px;
+    margin-top: 25px;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: small;
+    transition: 0.25s ease-in-out;
+    background: transparent;
+}
+
+.btn_login:hover{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,195,164,1) 31%, rgba(75,31,14,0.8801645658263305) 100%);
+    color: black;
+    font-weight: 650;
+    box-shadow: 0px -2px 5px 3px #a98779;
+}
+
+/* login section end */
+
+/* footer  */
+.copyright-text {
+    padding: 15px 0;
+}

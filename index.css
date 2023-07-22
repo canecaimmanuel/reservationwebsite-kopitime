@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Meddon&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid violet; */
+}
+
+.navbar-brand {
+    font-weight: 900;
+    margin-left: 40px;
+}
+
+.navbar-brand span {
+    color: #a98779;
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header section  */
+
+#header-body {
+    background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/kopibar.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.header-text {
+    color: #eee;
+    margin-top: 12rem;
+}
+
+.header-text h2 {
+    font-family: 'Meddon';
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #a98779;
+}
+
+.header-text h1 {
+    font-family: 'Staatliches';
+    font-size: 5rem;
+}
+
+#header-body p {
+    font-family: 'Montserrat';
+}
+
+.header-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.header-btn a {
+    border: 1px solid #fff;
+    margin-left: 10px;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: small;
+    transition: 0.25s ease-in-out;
+}
+
+.header-btn a:hover {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,195,164,1) 31%, rgba(75,31,14,0.8801645658263305) 100%);
+    color: black;
+    font-weight: 650;
+    box-shadow: 0px -2px 5px 3px #a98779;
+}
+
+/* main body  */
+
+#main-body {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    font-family: 'Montserrat';
+}
+
+.title {
+    font-size: 2.5rem;
+    /* font-weight: 900; */
+}
+
+.title span {
+    color: #a98779;
+}
+
+.menu-card {
+    height: 320px;
+    margin: 30px 15px;
+    box-shadow: 5px 5px 20px black;
+    transition: 0.5s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card a p {
+    font-family: 'Staatliches';
+    color: #a98779;
+    font-size: 18px;
+}
+
+.button-below {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    border: 1px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-size: small;
+}
+
+.button:hover {
+    background: #a98779;
+    color: #fff;
+    border: #fff;
+}
+
+
+/* footer body 
+
+#footer-body {
+    background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp);
+    height: 400px;
+    width: 100%;
+}
+
+.footer-content {
+    padding-top: 25px;
+}
+
+.footer-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer-button {
+    border: 1px solid #fff;
+    margin-left: 10px;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: small;
+    transition: 0.25s ease-in-out;
+    background: transparent;
+}
+
+.footer-button:hover {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,195,164,1) 31%, rgba(75,31,14,0.8801645658263305) 100%);
+    color: black;
+    font-weight: 650;
+    box-shadow: 0px -2px 5px 3px #a98779;
+}
+
+.copyright-text {
+    padding: 15px 0;
+} */
+
+@media screen and (max-width: 402px) {
+    .header-text p {
+        font-size: 10px !important;
+    }
+
+    .menu-card {
+        height: 200px !important;
+        margin: 5px !important;
+    }
+
+    .menu-text a p {
+        font-size: 15px !important;
+        margin-bottom: -15px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header-content {
+        margin-top: -35px !important;
+    }
+
+    .title {
+        font-size: 30px !important;
+    }
+
+    .main-content {
+        display: flex;
+    }
+
+    .main-card {
+        width: 50%;
+    }
+
+    .menu-card {
+        height: 200px !important;
+        margin: 10px;
+    }
+
+    .menu-card img {
+        height: 200px !important;
+        width: 100%;
+    }
+
+    .menu-text a p {
+        font-size: 15px !important;
+        margin-top: -10px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header-body {
+        height: 370px;
+    }
+
+    .navbar-brand {
+        margin: -5px;
+    }
+
+    .header-text {
+        margin-top: 90px !important;
+    }
+
+    .header-text h2 {
+        font-size: 30px;
+    }
+
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    .header-btn a{
+        padding: 8px 18px;
+        font-size: 10px;
+    }
+
+    /* main body  */
+    .title {
+        font-size: 35px;
+    }
+
+    #main-body {
+     margin: 4rem 0;
+    }
+
+    .menu-card {
+        height: 270px !important;
+        margin: 10px !important;
+    }
+
+    .menu-text a p {
+        font-size: 15px;
+        /* margin-bottom: -20px !important; */
+    }
+
+    .button-below a {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    /* footer  */
+    .footer-btn button {
+        font-size: 10px;
+        padding: 8px 20px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .copyright-text small {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #header-body {
+        height: 380px;
+    }
+
+    .navbar-brand {
+        margin-left: -5px;
+    }
+
+    .header-text {
+        margin-top: 80px;
+    }
+
+    .header-text h2 {
+        font-size: 40px;
+    }
+
+    .header-text h1 {
+        font-size: 70px;
+    }
+
+    .header-text p {
+        font-size: 15px;
+    }
+
+    .header-btn a{
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+
+    /* main body  */
+    .title {
+        font-size: 35px;
+    }
+
+    #main-body {
+     margin: 4rem 0;
+    }
+
+    .menu-card {
+        height: 400px;
+    }
+
+    .menu-text a p {
+        font-size: 22px;
+    }
+
+    .button-below a {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    /* footer  */
+    .footer-btn button {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .copyright-text small {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-text {
+        margin-top: 5rem;
+    }
+
+    .menu-card {
+        height: 270px;
+    }
+
+    .menu-text a p {
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+}
