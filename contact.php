@@ -33,7 +33,8 @@
     style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 2rem;">
     <div class="container">
 
-        <h2 class="title text-white">"Give us your <a href="#" class="text-white">Feedback"</a></h2>
+        <h2 class="title text-white" style="font-family: 'Montserrat';">"Give us your <a href="#"
+                class="text-white">Feedback"</a></h2>
 
     </div>
 </section>

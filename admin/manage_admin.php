@@ -3,7 +3,7 @@
 ?>
 
 <!-- Main Content Section Starts  -->
-<div class="main-content">
+<div class="main-content" style="height: 85vh;">
     <div class="container">
         <div class="row">
             <div class="d-flex justify-content-between">

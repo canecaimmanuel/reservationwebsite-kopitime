@@ -94,7 +94,7 @@
                             width="100px">
                         <?php
                             } else {
-                                echo "<div class='title fst-italic'>Image not added.</div>'";
+                                echo "<div class='title fst-italic'>Image not added.</div>";
                             }
                         ?>
                     </td>

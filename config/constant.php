@@ -24,9 +24,11 @@ if($conn->connect_error) {
 ?>
 
 <?php
+
+// session_start();
  
- //Create Constants to Store Non Repeating Values
-//  define('SITEURL', 'http://localhost/myprojects/reservationwebsite/');
+//  //Create Constants to Store Non Repeating Values
+//  define('$url', 'http://localhost/myprojects/reservationwebsite/');
 //  define('LOCALHOST', 'localhost');
 //  define('DB_USERNAME', 'root');
 //  define('DB_PASSWORD', '');

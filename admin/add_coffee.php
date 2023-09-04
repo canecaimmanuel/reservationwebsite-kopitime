@@ -151,7 +151,7 @@
                         $ext = end($result);
                          
                         //Creaate new name for image
-                        $image_name = "Coffee_name_".rand(0000,9999).".".$ext;
+                        $image_name = "Coffee_name_".time().".".$ext;
 
 
                         //B. Upload the image

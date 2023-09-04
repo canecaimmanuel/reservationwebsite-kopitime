@@ -153,6 +153,7 @@
                     $active = $_POST['active'];
                      //2. Upload image if selected
                      //Checked whether upload button is upload or not
+                     
                      if(isset($_FILES['image']['name'])){
                         //upload button clicked
                         $image_name = $_FILES['image']['name'];
@@ -172,7 +173,7 @@
                                 $_SESSION['upload'] = " <div class='fst-italic title'> Failed to upload new image.</div>";
                                 header('location:'.$url.'admin/manage_coffee.php');
                                 die();
-                            }
+                            } 
 
                             if($current_image != ""){
                                 $remove_path = "../images/coffee/".$current_image;
@@ -184,7 +185,9 @@
                                     header('location:'.$url.'admin/manage_coffee.php');
                                     die();
                                 }
-                            }
+                            } 
+                        } else {
+                            $image_name = $current_image; //Default image if when image is not selected
                         }
                      } else {
                         $image_name = $current_image;

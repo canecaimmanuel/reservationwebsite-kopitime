@@ -13,12 +13,24 @@
                 </p>
             </div>
             <div class="header-btn">
-                <a href="" type="button" class="text-decoration-none">READ MORE</a>
-                <a href="" type="button" class="text-decoration-none">ORDER</a>
+                <a href="<?php echo "categories.php"; ?>" type="button" class="text-decoration-none">READ MORE</a>
+                <a href="<?php echo "coffee.php"; ?>" type="button" class="text-decoration-none">ORDER</a>
             </div>
         </div>
     </div>
 </header>
+
+
+<div class="text-end p-4" style="color: #a98779;">
+    <?php
+    if(isset($_SESSION['order'])){
+        echo $_SESSION['order'];
+        unset($_SESSION['order']);
+    }
+?>
+
+</div>
+
 
 <main id="main-body">
     <div class="container ">
@@ -88,49 +100,50 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-5 shadow m-5 p-3 bg-white" style="border-radius: 15px; display: flex;">
-                <img src="coffeepics/darkMochaFrappuccino.jpg" class="b-0 me-3" width="150px"
-                    style="border-radius: 15px;">
-                <div>
-                    <h5>Frappuccino</h5>
-                    <p>Price:</p>
-                    <p>Details:</p>
-                    <a class="btn btn-success" href="<?php echo $url; ?>order.php">Order</a>
-                </div>
-            </div>
 
-            <div class="col-md-5 shadow m-5 p-3 bg-white" style="border-radius: 15px; display: flex;">
-                <img src="coffeepics/darkMochaFrappuccino.jpg" class="b-0 me-3" width="150px"
-                    style="border-radius: 15px;">
-                <div>
-                    <h5>Frappuccino</h5>
-                    <p>Price:</p>
-                    <p>Details:</p>
-                    <a class="btn btn-success" href="<?php echo $url; ?>order.php">Order</a>
-                </div>
-            </div>
+            <?php
+                $sql2 = "SELECT * FROM tbl_coffee LIMIT 4";
 
-            <div class="col-md-5 shadow m-5 p-3 bg-white" style="border-radius: 15px; display: flex;">
-                <img src="coffeepics/darkMochaFrappuccino.jpg" class="b-0 me-3" width="150px"
-                    style="border-radius: 15px;">
-                <div>
-                    <h5>Frappuccino</h5>
-                    <p>Price:</p>
-                    <p>Details:</p>
-                    <a class="btn btn-success" href="<?php echo $url; ?>order.php">Order</a>
-                </div>
-            </div>
+                $request = mysqli_query($conn, $sql2);
 
+                $num_rows = mysqli_num_rows($request);
+
+                if($num_rows > 0){
+                    while($row = mysqli_fetch_assoc($request)){
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $price = $row['price'];
+                        $description = $row['description'];
+                        $image_name = $row['image_name'];
+                        $active = $row['active'];
+                        ?>
             <div class="col-md-5 shadow m-5 p-3 bg-white" style="border-radius: 15px; display: flex;">
-                <img src="coffeepics/darkMochaFrappuccino.jpg" class="b-0 me-3" width="150px"
-                    style="border-radius: 15px;">
+                <?php 
+                                if($image_name == ""){
+                    echo "<div class='fst-italic title'>Coffee image not available.</div>";
+                                }else{
+                                    ?>
+                <img src="<?php echo $url; ?>images/coffee/<?php echo $image_name; ?>" class="me-3" width="150px" <?php
+                                }
+                            ?> style="border-radius: 15px;">
                 <div>
-                    <h5>Frappuccino</h5>
-                    <p>Price:</p>
-                    <p>Details:</p>
-                    <a class="btn btn-success" href="<?php echo $url; ?>order.php">Order</a>
+                    <h5><?php echo $title; ?></h5>
+                    <div style="font-size: 14px;">Price: ₱<?php echo $price; ?></div>
+                    <p style="font-size: 14px;">Details: <?php echo $description; ?>.</p>
+                    <div style="font-size: 12px;" class="mb-1">Active: <span><?php echo $active; ?></span></div>
+                    <a class="btn btn-success"
+                        href="<?php echo $url; ?>order.php?coffee_id=<?php echo $id; ?>">Order</a>
                 </div>
             </div>
+            <?php
+                    }
+                } else {
+                    echo "<div class='fst-italic title'>Error not found</div>";
+                }
+            ?>
+
+
+
 
         </div>
     </div>

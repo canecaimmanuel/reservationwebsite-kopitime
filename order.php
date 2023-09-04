@@ -7,12 +7,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
-
-    <!-- Link our CSS file -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kopitime</title>
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Meddon&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap');
@@ -212,30 +208,73 @@ fieldset {
     </section>
     <!-- Navbar Section Ends Here -->
 
+    <?php
+       //Check whether coffee is set or not
+       if(isset($_GET['coffee_id']))  
+       {
+        $coffee_id = $_GET['coffee_id'];
+
+        //Get the details of the selected coffee
+        $sql = "SELECT * FROM tbl_coffee WHERE id=$coffee_id";
+        $res = mysqli_query($conn, $sql);
+        $num_rows = mysqli_num_rows($res);
+        //Check wheyher the data available or not
+        if($num_rows == 1){
+            $row = mysqli_fetch_assoc($res);
+            $title = $row['title'];
+            $price = $row['price'];
+            $image_name = $row['image_name'];
+        } else {
+            //food not available
+            //Redirect to Home page
+            header('location:'.$url);
+        }
+        
+       } else {
+        //Redirect to homepage
+        header('location:'.$url);
+       }
+    ?>
+
     <!-- coffee sEARCH Section Starts Here -->
     <section class="coffee-search">
         <div
-            style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center;">
+            style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 4rem;">
 
-            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <h2 class="text-center text-white" style="font-family: 'Montserrat'; font-size: 45px;">Fill this form to
+                confirm your order.
+            </h2>
         </div>
         <div class="container">
 
 
-            <form action="#" class="order">
+            <form action="" method="POST" class="order">
                 <fieldset>
                     <legend>Selected Coffee</legend>
 
                     <div class="coffee-menu-img">
-                        <img src="coffeepics/darkMochaFrappuccino.jpg" class="img-responsive img-curve">
+                        <?php
+                            //Check whether the image is available or not
+                            if($image_name == ""){
+                                echo "<div class='fst-italic title'>Image not available</div>";
+                            }else{
+                                ?>
+                        <img src="<?php echo $url; ?>images/coffee/<?php echo $image_name; ?>"
+                            class="img-responsive img-curve">
+                        <?php
+                            }
+                        ?>
+
                     </div>
 
                     <div class="coffee-menu-desc">
-                        <h3>Coffee Name</h3>
-                        <p class="coffee-price">Price:</p>
+                        <h3><?php echo $title; ?></h3>
+                        <input type="hidden" name="coffee" value="<?php echo $title; ?>">
+                        <p class="coffee-price">Price: ₱<?php echo $price; ?></p>
+                        <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                        <input type="number" name="qty" class="input-responsive" value="0" required>
 
                     </div>
 
@@ -261,6 +300,55 @@ fieldset {
                 </fieldset>
 
             </form>
+
+            <?php
+                if(isset($_POST['submit'])){
+                    // echo 'click';
+                    $coffee = $_POST['coffee'];
+                    $price = $_POST['price'];
+                    $qty = $_POST['qty'];
+                    $total = $price * $qty; 
+
+                    $order_date = date("Y-m-d h:i:sa"); //order date
+
+                    $status = "Ordered"; //Ordered, On delivery, delivered, cancelled
+
+                    $customer_name = $_POST['full-name'];
+                    $customer_contact = $_POST['contact'];
+                    $customer_email = $_POST['email'];
+                    $customer_address = $_POST['address'];
+
+                    //Save order in database
+
+                    $sql2 = "INSERT INTO tbl_order SET
+                     coffee = '$coffee',
+                     price = $price,
+                     qty = $qty,
+                     total = $total,
+                     order_date = '$order_date',
+                     status = '$status',
+                     customer_name = '$customer_name',
+                     customer_contact = '$customer_contact',
+                     customer_email = '$customer_email',
+                     customer_address = '$customer_address'
+                    ";
+
+                    // echo $sql2; die();
+
+                    //Execute the query
+                    $res2 = mysqli_query($conn, $sql2);
+
+                    if($res2 == true){
+                        $_SESSION['order'] = "<div class='fst-italic message'>Ordered successfully</div>";
+                        // header('location:'.$url);
+                        echo "<script> window.location.href='index.php'</script>";
+
+                    } else {
+                        $_SESSION['order'] = "<div class='fst-italic message'>Failed to ordered</div>";
+                        header('location:'.$url);
+                    }
+                }
+            ?>
 
         </div>
     </section>

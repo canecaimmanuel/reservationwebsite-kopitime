@@ -30,7 +30,7 @@ a {
 /* header section  */
 
 #header-body {
-    background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/kopibar.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), #4b1f0e), url(coffeepics/kopibar.jpg);
     background-size: cover;
     height: 80vh;
     width: 100%;
