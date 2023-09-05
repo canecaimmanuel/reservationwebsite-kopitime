@@ -8,9 +8,6 @@
     //2. Create SQL Query to Delete Admin
     $sql = "DELETE FROM tbl_admin WHERE id=$id";
 
-    //Execute the Query 
-    $res = mysqli_query($conn, $sql);
-
     if($conn->query($sql)){
         // echo "Admin deleted successfully!";
         $_SESSION['delete'] = "Admin deleted successfully";

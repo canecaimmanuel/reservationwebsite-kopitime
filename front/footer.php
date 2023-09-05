@@ -14,7 +14,7 @@
         </ul>
     </div>
 
-    <div id="copyright ">
+    <div id="copyright">
         <div class="copyright-text text-center">
             <small class="text-muted">COPYRIGHT &copy 2023 KOPI TIME PROJECT, ALL RIGHTS RESERVED</small>
         </div>

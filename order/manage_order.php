@@ -68,9 +68,9 @@
                     <tr>
                         <td><?php echo $sn++; ?>.</td>
                         <td class="px-4"><?php echo $coffee; ?></td>
-                        <td><?php echo $price; ?></td>
+                        <td>₱<?php echo $price; ?></td>
                         <td class="text-center"><?php echo $qty; ?></td>
-                        <td><?php echo $total; ?></td>
+                        <td>₱<?php echo $total; ?></td>
                         <td class="text-center"><?php echo $order_date; ?></td>
                         <td class="px-3">
                             <?php

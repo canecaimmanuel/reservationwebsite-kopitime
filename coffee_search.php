@@ -2,27 +2,13 @@
     include('front/nav.php');
 ?>
 
-<style>
-.message {
-    color: #a98779;
-}
-
-.hover {
-    color: #fff;
-}
-
-.hover:hover {
-    color: #a98779;
-}
-</style>
-
 <!-- fOOD sEARCH Section Starts Here -->
 <section
     style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; margin-bottom: 8rem;">
 
     <?php
     //Get the search keyword
-    $search = $_POST['search'];
+    $search = mysqli_real_escape_string($_POST['search']);
 
     ?>
 
@@ -66,7 +52,7 @@
                 <div style="font-size: 14px;">Price: ₱<?php echo $price; ?></div>
                 <p style="font-size: 14px;">Details: <?php echo $description; ?>.</p>
                 <div style="font-size: 12px;" class="mb-1">Active: <span><?php echo $active; ?></span></div>
-                <a class="btn btn-success" href="<?php echo $url; ?>order.php">Order</a>
+                <a class="btn btn-success" href="<?php echo $url; ?>order.php?coffee_id=<?php echo $id; ?>">Order</a>
             </div>
         </div>
         <?php
