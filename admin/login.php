@@ -60,7 +60,7 @@
         //Get the data from the login form
 
         //Get data from login form
-        $username = mysqli_real_escape_string($_POST['username']);
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = md5($_POST['password']);
 
         $sql = "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password'";
