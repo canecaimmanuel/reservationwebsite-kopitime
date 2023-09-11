@@ -3,7 +3,7 @@
 ?>
 
 <section
-    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 2rem;">
+    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(../coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 2rem;">
     <div class="container">
 
         <h2 class="title text-white" style="font-family: 'Montserrat';">"Give us your <a href="#"
@@ -13,7 +13,7 @@
 </section>
 
 <div
-    style="background: url(coffeepics/kopifooter.jpg); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; height: 75vh;">
+    style="background: url(../coffeepics/kopifooter.jpg); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; height: 75vh;">
     <div class="container">
         <div class="row">
             <div class="col-md-5 mx-auto content_contact text-white">

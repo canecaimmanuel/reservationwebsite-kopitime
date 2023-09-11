@@ -4,7 +4,7 @@
 
 <!-- fOOD sEARCH Section Starts Here -->
 <section
-    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; margin-bottom: 8rem;">
+    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(../coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; margin-bottom: 8rem;">
 
     <?php
     //Get the search keyword
@@ -45,14 +45,15 @@
 
           ?>
         <div class="col-md-5 shadow m-5 p-3" style="border-radius: 15px; display: flex;">
-            <img src="<?php echo $url; ?>images/coffee/<?php echo $image_name; ?>" class="me-3" width="150px"
+            <img src="<?php echo $url; ?>../images/coffee/<?php echo $image_name; ?>" class="me-3" width="150px"
                 style="border-radius: 15px;">
             <div>
                 <h5><?php echo $title; ?></h5>
                 <div style="font-size: 14px;">Price: ₱<?php echo $price; ?></div>
                 <p style="font-size: 14px;">Details: <?php echo $description; ?>.</p>
                 <div style="font-size: 12px;" class="mb-1">Active: <span><?php echo $active; ?></span></div>
-                <a class="btn btn-success" href="<?php echo $url; ?>order.php?coffee_id=<?php echo $id; ?>">Order</a>
+                <a class="btn btn-success"
+                    href="<?php echo $url; ?>customer/order.php?coffee_id=<?php echo $id; ?>">Order</a>
             </div>
         </div>
         <?php

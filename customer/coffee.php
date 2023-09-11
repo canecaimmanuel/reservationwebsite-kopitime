@@ -1,14 +1,15 @@
 <?php
-    include('front/nav.php');
+    include('./front/nav.php');
 ?>
 
 <!-- fOOD sEARCH Section Starts Here -->
 <section
-    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; margin-bottom: 8rem;">
+    style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(../coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; margin-bottom: 8rem;">
 
     <div class="container">
         <div class="row" style="font-family: 'Montserrat';">
-            <form action="<?php echo $url; ?>coffee_search.php" method="POST" class="d-flex justify-content-center">
+            <form action="<?php echo $url; ?>customer/coffee_search.php" method="POST"
+                class="d-flex justify-content-center">
                 <input type="search" name="search" placeholder=" Search for coffee..." class="p-2" style="width: 50%;"
                     required>
                 <input type="submit" name="submit" value="Search" class="button ms-1">
@@ -58,7 +59,8 @@
                 <div style="font-size: 14px;">Price: ₱<?php echo $price; ?></div>
                 <p style="font-size: 14px;">Details: <?php echo $description; ?>.</p>
                 <div style="font-size: 12px;" class="mb-1">Active: <span><?php echo $active; ?></span></div>
-                <a class="btn btn-success" href="<?php echo $url; ?>order.php?coffee_id=<?php echo $id; ?>">Order</a>
+                <a class="btn btn-success"
+                    href="<?php echo $url; ?>customer/order.php?coffee_id=<?php echo $id; ?>">Order</a>
             </div>
         </div>
         <?php

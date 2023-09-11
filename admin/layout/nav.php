@@ -21,19 +21,19 @@
     <!-- Nav section Starts  -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><span>Kopi</span> time</a>
+            <a class="navbar-brand" href="<?php echo $url; ?>/admin/index.php"><span>Kopi</span> time</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="<?php echo $url; ?>admin/index.php">Home</a>
-                    <a class="nav-link" href="<?php echo $url; ?>admin/manage_admin.php">Admin</a>
-                    <a class="nav-link" href="<?php echo $url; ?>category/manage_category.php">Category</a>
-                    <a class="nav-link" href="<?php echo $url; ?>admin/manage_coffee.php">Coffee</a>
-                    <a class="nav-link" href="<?php echo $url; ?>order/manage_order.php">Order</a>
-                    <a class="nav-link" href="<?php echo $url; ?>admin/logout.php">Logout</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/admin/index.php">Home</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/admin/manage_admin.php">Admin</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/category/manage_category.php">Category</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/admin/manage_coffee.php">Coffee</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/order/manage_order.php">Order</a>
+                    <a class="nav-link" href="<?php echo $url; ?>/admin/logout.php">Logout</a>
                 </div>
             </div>
         </div>

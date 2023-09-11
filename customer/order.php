@@ -1,5 +1,5 @@
 <?php
-    include('config/constant.php');
+    include('../config/constant.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopitime</title>
-    <link rel="stylesheet" href="./order.css">
+    <link rel="stylesheet" href="../css/order.css">
 </head>
 
 <body>
@@ -23,19 +23,19 @@
             <div class="menu text-right">
                 <ul>
                     <li>
-                        <a href="<?php echo $url; ?>">Home</a>
+                        <a href="<?php echo $url; ?>customer/">Home</a>
                     </li>
                     <li>
-                        <a href="<?php echo $url; ?>admin/manage_admin.php">Admin</a>
+                        <a href="<?php echo $url; ?>admin/login.php">Admin</a>
                     </li>
                     <li>
-                        <a href="<?php echo $url; ?>categories.php">Category</a>
+                        <a href="<?php echo $url; ?>customer/categories.php">Category</a>
                     </li>
                     <li>
-                        <a href="<?php echo $url; ?>coffee.php">Coffee</a>
+                        <a href="<?php echo $url; ?>customer/coffee.php">Coffee</a>
                     </li>
                     <li>
-                        <a href="<?php echo $url; ?>contact.php">Contact</a>
+                        <a href="<?php echo $url; ?>customer/contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -69,19 +69,19 @@
         } else {
             //food not available
             //Redirect to Home page
-            header('location:'.$url);
+            header('location:'.$url.'customer/');
         }
         
        } else {
         //Redirect to homepage
-        header('location:'.$url);
+        header('location:'.$url.'customer/');
        }
     ?>
 
     <!-- coffee sEARCH Section Starts Here -->
     <section class="coffee-search">
         <div
-            style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 4rem;">
+            style="background: linear-gradient(rgba(0,0,0,0.5),#4b1f0e), url(../coffeepics/coffee-footer.webp); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 7% 0; text-align: center; height: 4rem;">
 
             <h2 class="text-center text-white" style="font-family: 'Montserrat'; font-size: 45px;">Fill this form to
                 confirm your order.

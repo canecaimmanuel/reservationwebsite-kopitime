@@ -42,7 +42,7 @@
                         <input type="password" name="password" placeholder="Password" class="form-control"
                             required /><br>
                         <button type="submit" name="submit" class="btn_login">Log In</button>
-                        <a href="<?php echo $url; ?>" class="btn_login text-decoration-none">Home</a>
+                        <a href="<?php echo $url; ?>/customer/" class="btn_login text-decoration-none">Home</a>
                     </form>
                 </div>
             </div>

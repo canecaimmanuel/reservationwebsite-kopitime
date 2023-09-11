@@ -1,5 +1,5 @@
 <?php
-    include('front/nav.php');
+    include('./front/nav.php');
 ?>
 
 <header id="header-body">
@@ -85,7 +85,8 @@
         </div>
         <hr>
         <div class="button-below">
-            <a href="<?php echo $url; ?>categories.php" type="button" class="button"><span class="me-4">SEE MORE</span>
+            <a href="<?php echo $url; ?>customer/categories.php" type="button" class="button"><span class="me-4">SEE
+                    MORE</span>
                 <i class="fa-solid fa-angle-right"></i></a>
         </div>
 </main>
@@ -132,7 +133,7 @@
                     <p style="font-size: 14px;">Details: <?php echo $description; ?>.</p>
                     <div style="font-size: 12px;" class="mb-1">Active: <span><?php echo $active; ?></span></div>
                     <a class="btn btn-success"
-                        href="<?php echo $url; ?>order.php?coffee_id=<?php echo $id; ?>">Order</a>
+                        href="<?php echo $url; ?>customer/order.php?coffee_id=<?php echo $id; ?>">Order</a>
                 </div>
             </div>
             <?php
@@ -151,7 +152,7 @@
 <div class="container" style=" margin-bottom: 7rem">
     <hr>
     <div class="button-below">
-        <a href="<?php echo $url; ?>coffee.php" type="button" class="button"><span class="me-4">SEE
+        <a href="<?php echo $url; ?>customer/coffee.php" type="button" class="button"><span class="me-4">SEE
                 MORE</span>
             <i class="fa-solid fa-angle-right"></i></a>
     </div>

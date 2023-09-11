@@ -1,4 +1,4 @@
-<?php include('config/constant.php'); ?>
+<?php include('../config/constant.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,25 +11,25 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/904fa8d934.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
     <!-- Nav section Starts  -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo $url; ?>"><span>Kopi</span> time</a>
+            <a class="navbar-brand" href="<?php echo $url; ?>customer/"><span>Kopi</span> time</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="<?php echo $url; ?>">Home</a>
-                    <a class="nav-link" href="<?php echo $url; ?>admin/manage_admin.php">Admin</a>
-                    <a class="nav-link" href="<?php echo $url; ?>categories.php">Category</a>
-                    <a class="nav-link" href="<?php echo $url; ?>coffee.php">Coffee</a>
-                    <a class="nav-link" href="<?php echo $url; ?>contact.php">Contact</a>
+                    <a class="nav-link" href="<?php echo $url; ?>customer/">Home</a>
+                    <a class="nav-link" href="<?php echo $url; ?>admin/login.php">Admin</a>
+                    <a class="nav-link" href="<?php echo $url; ?>customer/categories.php">Category</a>
+                    <a class="nav-link" href="<?php echo $url; ?>customer/coffee.php">Coffee</a>
+                    <a class="nav-link" href="<?php echo $url; ?>customer/contact.php">Contact</a>
                 </div>
             </div>
         </div>
